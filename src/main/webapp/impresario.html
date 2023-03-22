@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style1.css">
+    <!-- <script src="https://kit.fontawesome.com/2f00c05cca.js" crossorigin="anonymous"></script> -->
+
+    <title>superadmin</title>
+</head>
+<body id="impresariobody">
+    <input type="button" style="z-index: 2;" class="signout inputbtn" onclick="window.signout()" value="Logout">
+    <iframe id="iframe" src="addscreen.html"></iframe>
+
+    <div id="screenstructurediv">
+
+    </div>
+    <div id="block"></div>
+    <div id="amenitiesdiv"></div>
+    <div id="theatrescreenwholediv">
+         <div id="theatrescreenleft"></div> 
+         <div id="theatrescreenright">
+            <div id="mytheatredetails"></div>
+            <div id="addscreenbtnintheatre" onclick="addscreen()">ADD SCREEN</div>
+            <div id="closebtn" onclick="hidescreendiv()">CLOSE</div>
+         </div>
+    </div>
+
+    <div id="leftbubble"></div>
+    <div id="rightbubble"></div>
+    <div id="impresariotop">
+        <div id="theatrelist"></div>
+        <div id="impresariotopmiddle">
+            <div id="addtheatre" onclick="addtheatreform()">
+                ADD THEATRE
+            </div>
+            <div id="addtheatreform">
+                <p>Theatre Form</p>
+                <input type="text" placeholder="Theatre Name" class="addscreeninput whitecolor" id="theatrename">
+                <input type="text" placeholder="Address" class="addscreeninput whitecolor" id="theatreaddress">
+                <input type="text" placeholder="City" class="addscreeninput whitecolor" id="city">
+                <input type="text" placeholder="State" class="addscreeninput whitecolor" id="state">
+                <input type="text" placeholder="Country" class="addscreeninput whitecolor" id="country">
+                <input type="button" class="inputbtn addpadd" onclick="getlanmark()" style="    margin: 6px 65px;height: 50px;width: 300px;" value="ADD Landmark">
+                <input type="button" class="inputbtn addpadd"  onclick="showamenities()" style="    margin: 6px 65px;height: 50px;width: 300px;" value="ADD Amenities">
+                <p id="landtext"></p>
+                <input type="button" class="inputbtn addpadd" onclick="hidetheatreform()" value="Cancel">
+                <input type="button" class="inputbtn addpadd" onclick="addtheatretodb()" value="Add Theatre">
+            </div>
+            <div id="Landmarkbox"></div>
+        <div id="bookshow" onclick="addshowdiv()">ADD SHOW</div>
+        </div>
+        <div id="bookedshows"></div>
+    </div>
+    <div id="impresariobottom">
+        <div id="buymoviebtn" onclick="buymovies()">
+            BUY MOVIE
+        </div>
+        <div id="movielist"></div>
+    </div>
+    <div id="buymovieform">
+        <div id="buymoviedetails">
+            <div id="buymoviedeatilsimgdiv">
+                <img src="" alt="" id="buymoviedeatilsimg">
+            </div>
+            <div id="buymoviedetailsdisplay"></div>
+        </div>
+        <div id="calculator">
+            <p id="p10"></p>
+            <input type="range" min="100" max="2500" step="100" value="100" id="pricerange">
+            <input class="inputbtn" value="CANCEL" onclick="hidethismovieform(this,1)" type="button">
+        </div>
+        <div id="listofbuyedmovie">
+            
+        </div>
+    </div>
+    <div id="showdistributormovies"></div>
+    <div id="buymovieformdiv">
+        <p id="movietitle"></p>
+        <input class="addscreeninput" id="screencount" type="number" placeholder="screencount" onkeyup="checkscreen(1)">
+        <p id="textofscreencount" style="display: none;"></p>
+        <input class="addscreeninput" id="capacity" type="number" placeholder="max capacity of screens" onkeyup="checkscreen(1)">
+        <input class="addscreeninput" id="showperday" type="number" placeholder="shows per day">
+        <input class="addscreeninput" id="startday" type="date">
+        <input class="addscreeninput" id="endday" type="date">
+        <div id="buymovielanguage"></div>
+       <div><input class="inputbtn" value="CANCEL" type="button" onclick="hidethismovieform(this,0)"></div>
+        <input class="inputbtn" value="ADD TO Buylist" id="addmovielistbtn" type="button">
+    </div>
+    <div id="suggetionbox"></div>
+    <div id="buyedshowboard"></div>
+    <script src="websocket.js"></script>
+    <script src="impresario.js"></script>
+    
+</body>
+</html>

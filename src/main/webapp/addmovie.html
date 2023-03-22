@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distributor</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body id="addmoviePageBody" onload="addmoviepage()">
+    <div class="addmoviediv">
+        <div class="addmoviesqdiv">
+            <div class="user-box">
+                <input type="text" name="" autocomplete="off" id="moviename" required="">
+                <label>Movie Name</label>
+            </div>
+            <label class="text">Ratings</label>
+            <div class="radiodiv">
+
+                <label class="rad-label">
+                  <input type="radio" value="U" name="ratings">
+                  <div class="rad-text">U</div>
+                </label>
+              
+                <label class="rad-label">
+                  <input type="radio" value="A" name="ratings">
+                  <div class="rad-text">A</div>
+                </label>
+              
+                <label class="rad-label">
+                    <input type="radio" value="U_A" name="ratings">
+                    <div class="rad-text">U/A</div>
+                  </label>
+              
+                <label class="rad-label">
+                  <input type="radio" value="S" name="ratings">
+                  <div class="rad-text">S</div>
+                </label>
+              
+              </div>
+              <label class="text">Experience</label>
+              <div class="radiodiv">
+
+                <label class="rad-label">
+                  <input type="radio" value="D2" name="experience">
+                  <div class="rad-text">2D</div>
+                </label>
+              
+                <label class="rad-label">
+                  <input type="radio" value="D3" name="experience">
+                  <div class="rad-text">3D</div>
+                </label>
+              
+                <label class="rad-label">
+                    <input type="radio" value="XD4" name="experience">
+                    <div class="rad-text">4DX</div>
+                  </label>
+              
+              </div>
+        </div>
+        <div class="addmoviesqdiv">
+            <div class="user-box">
+                <input type="text" name="" autocomplete="off" id="hero" required="">
+                <label>Hero Name</label>
+            </div>
+            <div class="user-box">
+                <input type="text" name="" autocomplete="off" id="heroine" required="">
+                <label>Heroine Name</label>
+            </div>
+            <div class="user-box">
+                <input type="text" name="" autocomplete="off" id="villan" required="">
+                <label>Villan Name</label>
+            </div>
+        </div>
+        <div class="addmoviesqdiv">
+            <div class="user-box">
+                <input type="text" name="" autocomplete="off" id="director" required="">
+                <label>Director Name</label>
+            </div>
+            <div class="user-box">
+                <input type="text" name="" autocomplete="off" id="musicdirector" required="">
+                <label>Music Director Name</label>
+            </div>
+        </div>
+    </div>
+    <div class="addmoviediv">
+        <div class="addmoviesrcdiv">
+            <div class="storage" id="genrestorage"></div>
+            <input class="addmoviebtn" type="button" value="Add Genre" id="addgenrebtn">
+            <div class="storage" id="languagestorage"></div>
+            <input class="addmoviebtn" type="button" value="Add Language" id="addlanguagebtn">
+            
+        </div>
+        <div class="addmoviesrcdiv" id="syspos">
+            <p id="nowshowing">Synopsis</p>
+            <div class="storage" id="synopsis" contenteditable="true"></div>
+            <p id="nowshowing">common poster for all language</p>
+            <input class="addmoviebtn" type="file" accept="image/*" multiple="false" value="" id="bigposter">
+        </div>
+        
+    </div>
+    <div class="addmoviediv">
+        <div class="addmoviesqdiv">
+            <input class="addmoviebtn" type="date" value="" id="date">
+            
+            <div class="user-box miniswidth">
+                <input type="number" name="" autocomplete="off" id="hours" required="">
+                <label>Hours</label>
+            </div>
+
+            <div class="user-box miniswidth">
+                <input type="number" name="" autocomplete="off" id="mins" required="">
+                <label>Mins</label>
+            </div>
+
+        </div>
+        <div class="addmoviesqdiv">
+            <div class="user-box miniswidth">
+                <input type="number" name="" autocomplete="off" id="baseprice" required="">
+                <label>base price</label>
+            </div>
+            <div class="user-box miniswidth">
+                <input type="number" name="" autocomplete="off" id="capacity" required="">
+                <label>capacity</label>
+            </div>
+        </div>
+        <div class="addmoviesqdiv">
+            <input class="addmoviebtn" style="width:60%" type="button" value="Add movie" onclick="getimages()">
+        </div>
+    </div>
+    
+    <script src="customer.js"></script>
+</body>
+</html>

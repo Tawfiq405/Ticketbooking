@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style1.css">
+    <!-- <script src="https://kit.fontawesome.com/2f00c05cca.js" crossorigin="anonymous"></script> -->
+
+    <title>superadmin</title>
+</head>
+<body id="addscreenbody" onload="loadseating()">
+    <h2>New Screen</h2>
+    <div class="newscreendiv1">
+        <h3>Screen 1</h3>
+        <input id="screenname" class="addscreeninput" type="text" placeholder="Screen Name">
+
+        <div class="namedbox">
+            <p id="name">Lighting : &nbsp;&nbsp;&nbsp;&nbsp;<h6>RGB Laser</h6></p>
+            <div class="checkbox"><input id="rgb" type="checkbox" value="RGB Laser"><p>✔</p></div>
+        </div>
+        <p id="name">Sound system </p>
+        <div class="soundbox">
+            <span class="sepradbox"><h6>Dolby Atmos </h6><div class="radiobtn"><input  type="radio" name="sound" value="1"><span></span></div></span>
+            <span class="sepradbox"><h6>Dolby Audio </h6><div class="radiobtn"><input  type="radio" name="sound" value="2"><span></span></div></span>
+            <span class="sepradbox"><h6>Dolby 7.1 </h6><div class="radiobtn"><input  type="radio" name="sound" value="3"><span></span></div></span>
+            <span class="sepradbox"><h6>other </h6><div class="radiobtn"><input  type="radio" name="sound" value="4"><span></span></div></span>
+        </div>
+        <p id="name">Resolution </p>
+        <div class="soundbox x">
+            <span class="sepradbox"><h6>2K </h6><div class="radiobtn"><input  type="radio" name="Resolution" value="2K"><span></span></div></span>
+            <span class="sepradbox"><h6>4K </h6><div class="radiobtn"><input  type="radio" name="Resolution" value="4K"><span></span></div></span>
+        </div>
+        
+
+    </div>
+    <div class="newscreendiv2">
+        <div id="groupseating"></div>
+        <p id="lxtx">luxury Seating</p>
+        <div id="luxuryseating"></div>
+      <!--  <div class="dimentiongroupoptions">
+            <p>group 1</p>
+            <div class="radiobtn">
+                <input  type="radio" name="dimentiongroupoptions" value="1">
+                <span></span>
+            </div>
+            <ul>
+                <li>Executive</li>
+                <li>Corporate</li>
+                <li>Budget</li>
+            </ul>
+        </div>
+        <div class="dimentiongroupoptions">
+            <p>group 2</p>
+            <div class="radiobtn"><input  type="radio" name="dimentiongroupoptions" value="2"><span></span></div>
+            <ul>
+                <li>First class</li>
+                <li>Second class</li>
+                <li>Third class</li>
+            </ul>
+        </div>
+        <div class="dimentiongroupoptions">
+            <p>group 3</p>
+            <div class="radiobtn"><input  type="radio" name="dimentiongroupoptions" value="3"><span></span></div>
+            <ul>
+                <li>Quartz</li>
+                <li>Zircon</li>
+            </ul>
+        </div>
+        <div class="dimentiongroupoptions">
+            <p>group 4</p>
+            <div class="radiobtn"><input  type="radio" name="dimentiongroupoptions" value="4"><span></span></div>
+            <ul>
+                <li>Platinum</li>
+                <li>Gold</li>
+                <li>Copper</li>
+            </ul>
+        </div>
+        <div class="dimentiongroupoptions">
+            <p>group 5</p>
+            <div class="radiobtn"><input  type="radio" name="dimentiongroupoptions" value="5"><span></span></div>
+            <ul>
+                <li>Premium</li>
+                <li>Elite</li>
+            </ul>
+        </div>
+        <div class="dimentiongroupoptions">
+            <p>group 6</p>
+            <div class="radiobtn"><input  type="radio" name="dimentiongroupoptions" value="6"><span></span></div>
+            <ul>
+                <li>Diamond</li>
+                <li>pearl</li>
+                <li>Prime</li>
+                <li>classic</li>
+            </ul>
+        </div>
+        <p id="lxtx">luxury Seating</p>
+
+        <div class="luxurybox">
+            <h6>Sofa</h6>
+
+            <div class="checkbox">
+                <input name="extraseating" type="checkbox" value="sofa">
+                <p>✔</p>
+            </div>
+
+        </div>
+
+
+        <div class="luxurybox">
+            <h6>Lounge</h6>
+            <div class="checkbox"><input name="extraseating" type="checkbox" value="Lounge"><p>✔</p></div>
+        </div>
+        <div class="luxurybox">
+            <h6>Box</h6>
+            <div class="checkbox"><input name="extraseating" type="checkbox" value="Box"><p>✔</p></div>
+        </div>
+        <div class="luxurybox">
+            <h6>Balcony</h6>
+            <div class="checkbox"><input name="extraseating" type="checkbox" value="Balcony"><p>✔</p></div>
+        </div> -->
+        <input id="rowno" class="addscreeninput y" type="number" placeholder="Average row per catogery">
+        <input id="seatno" class="addscreeninput" type="number" placeholder="Average seat per row">
+        <input type="button" id="createstr" onclick="createstructure()" value="Create Structure">
+    </div>
+    <div class="screendiv"></div>
+    <input type="button" id="cancelscreen" onclick="parent.hideframe()" value="cancel">
+    <input type="button" id="addscreenbtn" value="Add Screen">
+
+    <div class="summa"></div>
+    <script src="websocket.js"></script>
+    <script src="theatre.js"></script>
+</body>
+</html>
+

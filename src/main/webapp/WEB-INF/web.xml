@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	<display-name>TawfiqMovieMania</display-name>
+
+	<welcome-file-list>
+		<welcome-file>customer.html</welcome-file>
+	</welcome-file-list>
+
+	<context-param>
+		<param-name>DBname</param-name>
+		<param-value>tawfiq</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>DBpass</param-name>
+		<param-value>Tawfiq$445</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>distributor</param-name>
+		<param-value>mohammedtawfiq405@gmail.com</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>Dspass</param-name>
+		<param-value>Tawfiq$445</param-value>
+	</context-param>
+
+	
+	
+	<filter>
+		<filter-name>Loginvalidation</filter-name>
+		<filter-class>filters.LoginValidation</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>Loginvalidation</filter-name>
+		<url-pattern>/Login</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>signupvalidation</filter-name>
+		<filter-class>filters.SignupValidation</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>signupvalidation</filter-name>
+		<url-pattern>/Signup</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>authentication</filter-name>
+		<filter-class>filters.Authentication</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>authentication</filter-name>
+		<url-pattern>/cinimas/*</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>distriautharaization</filter-name>
+		<filter-class>filters.DistributorAuthorization</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>distriautharaization</filter-name>
+		<url-pattern>/cinimas/distributor/*</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>ImpresarioAuthorization</filter-name>
+		<filter-class>filters.ImpresarioAuthorization</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>ImpresarioAuthorization</filter-name>
+		<url-pattern>/cinimas/impresario/*</url-pattern>
+	</filter-mapping>
+
+</web-app>
+
+
+
+
+
+
+
+
+
+
+
+
+ 
