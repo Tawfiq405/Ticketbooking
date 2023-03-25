@@ -1734,3 +1734,10 @@ top: 6%;
     margin: 5px;
     transition: 0.5 all;
 }
+
+
+select name,distributormovies.movieId,language.lId,language.language,ratings,imgpath,bigpath 
+        from distributormovies,languagerelations,language,smallimg
+             where distributormovies.movieId=languagerelations.movieId and 
+                    languagerelations.lId=language.lId and 
+                    languagerelations.movielId=smallimg.movielId;

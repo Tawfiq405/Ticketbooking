@@ -6,7 +6,7 @@ import java.net.URL;
 
 public class Mail {
 	public static boolean send(String mail,String sub,String content) {
-		String API_KEY = "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";
+		String API_KEY = "";
 
 		  try {
 	          URL url = new URL("https://api.sendinblue.com/v3/smtp/email");

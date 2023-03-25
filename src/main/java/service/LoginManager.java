@@ -32,7 +32,7 @@ public class LoginManager {
 			int i=0;
 			if(rs.next()) {
 				i=rs.getInt(1);
-				
+				System.out.println(i+"working this part");
 			}else {
 				synchronized (LoginManager.class) {
 					i= DBmanager.insert(new Customer(email.split("@")[0],email,"0000000000", null));

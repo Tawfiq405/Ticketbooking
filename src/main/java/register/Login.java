@@ -57,6 +57,7 @@ public class Login extends HttpServlet {
 		}else {
 			resobj.put("statusCode", 500);
 		}
+		resobj.put("statusCode", 200);
 		response.getWriter().append(resobj.toString());
 	}
 
@@ -82,6 +83,7 @@ public class Login extends HttpServlet {
 		}else {
 			LoginManager.checkotp("unknown@unknown.com", "0");
 		}
+//		resobj.put("statusCode", 200);
 		response.getWriter().append(resobj.toString());
 		
 	}

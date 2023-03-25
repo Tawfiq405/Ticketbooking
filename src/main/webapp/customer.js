@@ -27,7 +27,7 @@ function unknown(){
                 var json = JSON.parse(this.responseText);
                 if(json.statusCode==200){
                     console.log(json);
-                    getnearbymovies();    
+                    // getnearbymovies();    
                 }else if(json.statusCode==401){
                     window.location.href="home.html";
                 }else{
@@ -115,17 +115,20 @@ function signuppage(){
 
 var email;
 function login(){
+    console.log(email);
     email = document.getElementById("email").value;
     if(email.trim()==""){
         return;
     }else{
         email=email.trim();
     }
+
+    console.log(email);
     var mhr = new XMLHttpRequest();
     mhr.onreadystatechange = function(){
             if(this.readyState==4 && this.status == 200){
                 var json = JSON.parse(this.responseText);
-                console.log(this.responseText);
+                console.log(this.responseText+"--------------------------------------------------");
                 if(json.statusCode==200){
 
                     var div = document.createElement("div");
@@ -287,7 +290,7 @@ function getnearbymovies(){
                         
                         document.cookie="lat="+json.lat;
                         document.cookie="lon="+json.lon;
-                        fetchMovies();
+                        // fetchMovies();
                     }else if(json.statusCode==401){
                         unknown();
                     }else{
